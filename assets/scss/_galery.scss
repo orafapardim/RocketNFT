@@ -1,0 +1,36 @@
+.galery {
+  @include flx(center, column, flex-end);
+  gap: .5rem;
+  padding: 1rem;
+
+  &__list {
+    @include flx(center, row, space-between);
+    gap: .5rem;
+    height: 50%;
+    width: 100%;
+   
+    &--item {
+      flex: 1;
+      max-width: 25%;
+    }
+
+    &--figure, &--image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@include for-desktop-only {
+  .galery {
+    height: 45vh;
+    padding: 0 .5rem;
+
+    &__list {
+      &--item {
+        height: 100%;
+        max-width: auto;
+      }
+    }
+  }
+}

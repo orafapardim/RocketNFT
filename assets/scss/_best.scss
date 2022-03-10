@@ -1,0 +1,68 @@
+.best {
+  @include flx(center, column, space-evenly);
+  margin: 1rem auto;
+
+  &__artists {
+    @include flx(center, row, space-around);
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+.artists {
+  &__card {
+    @include flx(center, row, space-around);
+    background-color: $gray;
+    height: 9.375rem;
+    width: 21.875rem;
+
+    &:nth-child(2) {
+      background-color: $salmon;
+      order: -1;
+  
+      & .text--emphase {
+        color: $white;
+      }
+    }
+
+    &:nth-child(n+4):nth-child(-n+6) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include flx(flex-start, column, space-between);
+    gap: .5rem;
+  }
+}
+
+@include for-phone-only {
+  .best {
+    &__artists {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+}
+
+@include for-desktop-only {
+  .best {
+    &__artists {
+      gap: 5rem;
+    }
+  }
+
+  .artists {
+    &__card {
+      &:nth-child(2) {
+        order: 0;
+      }
+
+      &:nth-child(n+4):nth-child(-n+6) {
+        display: flex;
+      }
+    }
+  }
+}

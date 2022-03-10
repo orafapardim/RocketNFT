@@ -1,0 +1,46 @@
+.btn {
+  background-color: $white;
+  border: none;
+  color: $black;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  &--metamask {
+    display: none;
+
+    &:hover {
+      background-color: $gray;
+    }
+
+    @include for-desktop-only {
+      background: $white url(../img/MetaMask.png) no-repeat .5rem center / 1.875rem border-box scroll;
+      color: $black;
+      display: block;
+      padding: 1rem 1rem 1rem calc(1.875rem + (.5rem * 2));
+      width: auto;
+    }
+  }
+
+  &--top {
+    background: $salmon url(../img/icons/arrow-black.svg) no-repeat center / auto;
+    height: 5rem;
+    width: 5rem;
+
+    &:hover {
+      border-radius: 50%;
+    }
+  }
+
+  &--send {
+    &:hover {
+      background-color: $bg-card;
+      border: .0625rem solid $black;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+html {
+  background: $bg-color url(../img/background.png) no-repeat top / 100% 100vh border-box content-box scroll;
+  color: $white;
+  font: normal 1rem 'Montserrat', sans-serif;
+}
+
+.title, .subtitle {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3.125rem;
+}
+
+.subtitle {
+  font-size: 1.875rem;
+}
+
+.text {
+  font-size: 1.25rem;
+}
+
+.text--emphase {
+  color: $salmon;
+}
+
+@include for-phone-only {
+  .title {
+    font-size: 2.25rem;
+  }
+}

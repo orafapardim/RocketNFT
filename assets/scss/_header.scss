@@ -1,0 +1,18 @@
+.header {
+  @include flx(center, row, space-between);
+  border-bottom: 1px solid $salmon;
+  height: 15vh;
+  position: relative;
+  padding: 2rem 0 2rem 1rem;
+  width: 100%;
+
+  @include for-desktop-only {
+    padding: 1rem;
+  }
+
+  & .btn--metamask {
+    @media (max-width: 930px) {
+      display: none;
+    }
+  }
+}

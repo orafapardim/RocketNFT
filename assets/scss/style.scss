@@ -1,0 +1,7 @@
+@import 'base', 'tipography', 'buttons', 'links', 'navbar', 'forms', 'header', 'opening', 'galery', 'data', 'popular', 'best', 'footer';
+
+@include for-ultrawaid-only {
+  .header, .opening, .galery, .data, .popular, .best, .footer {
+    padding: 0 20%;
+  }
+}

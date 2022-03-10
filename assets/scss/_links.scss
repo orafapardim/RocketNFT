@@ -1,0 +1,52 @@
+.link {
+  color: $white;
+  font-size: 1.25rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--btn {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--dark {
+    color: $gray;
+  }
+
+  &__arrow--black, &__arrow--orange, &__arrow--white {
+    padding-right: 2.5rem;
+    position: relative;
+  }
+
+  &__arrow--black {
+    &::before {
+      content: url(../img/icons/arrow-black.svg);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__arrow--orange {
+    &::before {
+      content: url(../img/icons/arrow-orange.svg);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__arrow--white {
+    &::before {
+      content: url(../img/icons/arrow-white.svg);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}

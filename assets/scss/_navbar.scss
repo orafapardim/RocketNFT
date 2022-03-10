@@ -1,0 +1,83 @@
+.nav--collapse {
+  @include flx(center, row, flex-end);
+  height: 100%;
+
+  @include for-desktop-only {
+    @include flx(center, row, center)
+  }
+
+  & button {
+    background: url(../img/icons/menu-burger-open.svg) no-repeat center / 2.5rem border-box;
+    border: none;
+    border-radius: 1rem;
+    display: block;
+    height: 3rem;
+    position: absolute;
+    right: .5rem;
+    width: 3rem;
+
+    &.active {
+      background: url(../img/icons/menu-bruger-close.svg) no-repeat center / 2.5rem border-box;
+    }
+
+    @include for-desktop-only {
+      display: none;
+    }
+  }
+
+  & ul.nav--menu {
+    display: none;
+
+    @include for-desktop-only {
+      @include flx(center, row, center);
+      gap: 2rem;
+
+      & li:last-child {
+        display: none;
+      }
+    }
+  }
+
+  & ul.nav--menu.active {
+    @include flx(flex-start, column, flex-start);
+    background: $bg-card;
+    min-height: 100vh;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    & li {
+      @include flx(center, row, flex-start);
+      border-bottom: .0625rem solid $gray;
+      border-top: .0625rem solid $gray;
+      height: 3.5rem;
+      padding-left: 1rem;
+      width: 100%;
+
+      & a {
+        color: $salmon;
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+
+      &.link--active {
+        border-left: .3125rem solid $salmon;
+
+        & a {
+          color: $white;
+          font-weight: bold;
+        }
+      }
+
+      &:last-child {
+        & a {
+          align-items: center;
+          display: flex;
+          background: url(../img/metamask.png) no-repeat left center;
+          height:100%;
+          padding-left: 2.5rem;
+        }
+      }
+    }
+  }
+}
