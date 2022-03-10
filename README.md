@@ -1,4 +1,4 @@
-# Rocket-NFTs
+# Rocket NFTs
 > Mais um desafio onde a @rocketseat propõe o desenvolvimento de uma landing page para apresentação dos tokens temáticas da Rocket NFT. Um dos desafios elaborados e disponibilizados na plataforma da Rocket.
 
 <img src="https://user-images.githubusercontent.com/83538547/157715178-9a9da66a-6403-4a99-b6be-b97321050fd1.png" width="100%">
