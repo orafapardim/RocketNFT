@@ -19,7 +19,7 @@
     }
 
     @include for-desktop-only {
-      background: $white url(../img/MetaMask.png) no-repeat .5rem center / 1.875rem border-box scroll;
+      background: $white url(../img/metamask.png) no-repeat .5rem center / 1.875rem border-box scroll;
       color: $black;
       display: block;
       padding: 1rem 1rem 1rem calc(1.875rem + (.5rem * 2));
